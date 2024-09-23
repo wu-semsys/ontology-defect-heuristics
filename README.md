@@ -2,7 +2,14 @@
 
 This project is a REST service to check ontologies for possible defects using heuristics. For more information on the implemented heuristics see the [master thesis by Alexander Prock](https://repositum.tuwien.at/handle/20.500.12708/18436).
 
-It is written in Kotlin and uses Spring Boot. [OWL API](https://github.com/owlcs/owlapi/wiki) is used for handling ontologies, reasoning is performed using the HermiT reasoner.
+Currently, heuristics for the detection of four different modelling errors are implemented:
+
+- Missing Disjointness Axioms
+- Confusion between logical and linguistic “and”
+- Trivially satisfiable allValuesFrom Restrictions
+- Missing Closure Axioms
+
+The service is written in Kotlin and uses Spring Boot. [OWL API](https://github.com/owlcs/owlapi/wiki) is used for handling ontologies, reasoning is performed using the HermiT reasoner.
 
 Note: As this is a demo project no special effort was made to graciously handle errors, every problem will result in a response with error code 500.
 
