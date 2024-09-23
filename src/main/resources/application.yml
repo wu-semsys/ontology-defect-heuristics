@@ -1,0 +1,8 @@
+server:
+  port: 8085
+
+logging:
+  level:
+    at.ac.tuwien.ifs.semsys.ontologydefectheuristics: INFO
+    # this package has very noisy logs at level INFO
+    com.clarkparsia.owlapi.explanation: WARN
